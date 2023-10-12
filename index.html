@@ -21,17 +21,62 @@
       background-color: black;
       color: white;
       height: 80vh;
-      overflow-y: scroll;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to bottom, black 80%, grey);
+      background: linear-gradient(to bottom, black 80%);
     }
     .container-fluid h1 {
 	  height: 35vh;
-      font-size: 3em;
+      font-size: 2.75em;
     }
+	.image-container {
+	  position: relative;
+	  display: inline-block;
+	}
+	.text-overlay {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  color: #fff;
+	  text-align: center;
+	  z-index: 2;
+	}
+	.gradient-overlay-1 {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, grey);
+	}
+	.gradient-overlay-2 {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 90%, black);
+	}
+	.image-landscape {
+		width: 100vw;
+	}
+	.image-portrait {
+		width: 100vw;
+		display: none;
+		
+	}
+	.Once-Upon {
+		font-family: 'Cinzel Decorative', serif;		
+        font-size: 4.25em;
+	}	
 	@media (max-width: 560px) {
       .container-fluid h1 {	  
 	    height: 55vh;
@@ -40,14 +85,35 @@
 	  p {
 	    font-size: 1.5em;
 	  }
+	  .image-landscape {
+			display: none;
+		}
+		.image-portrait {
+			display: block;
+		}
+		.Once-Upon {	
+			font-size: 2.25em;
+		}	
     }
+	
   </style>
 </head>
 <body>
   <div class="container-fluid">
     <h1>"The only thing necessary for the triumph of evil is for good men to do nothing"</h1>
   </div>
+  <div class="image-container">
+  <img class="image-landscape" src="landscape.jpg">
+  <img class="image-portrait" src="portrait.jpg">
+  <div class="gradient-overlay-1"></div>  
+  <div class="gradient-overlay-2"></div>
+   <div class="text-overlay">
+    <h1 class="Once-Upon" >Once Upon A Time</h1>
+    <p>we knew what was good and what was evil...</p>
+  </div>
+</div>
   <div class="container">
+	<br><br>
     <h1>Josh Luther for Escambia School Board District 5</h1> <br>
     <p>I am running for School Board because District 5 needs a voice and a vote for what is good and true and not what furthers the totalitarian agenda. However, goodness and truth are ideas that necessitate an authoritative standard of morality that is not based on the arbitrary will of men. We find this standard in the Word of God, and by this standard we ought to judge right and wrong.<br> <br> 
 The nuclear family, because it is based on God’s design, is the most liberating and productive institution. And it is this institution that the public school has declared war on. If we loved children, we would raise boys to be husbands and girls to be wives, but because the school system has said in its heart, “There is no God,”(Ps 14:1) they have no problem with using children as political pawns and brainwashing them into believing that love is love and as long as both parties love each other it’s just as good as any other relation. Their purpose to “[i]nspire, empower and graduate students ready to contribute to society as productive, responsible citizens” would be a fraud except that the state wants men that have no basis of morality and no loyalty to a wife and children. These men will have no sense of honor and sacrifice and will simply act according to their self-interest. They will do whatever the state tells them because as the alleged descendants of fish, they feel no accountability to God.<br> <br> 
@@ -62,7 +128,5 @@ Paid by Joshua Luther for Escambia School Board District 5.
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
 </body>
 </html>
